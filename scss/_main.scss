@@ -1,0 +1,120 @@
+h2{
+    @include estiloTitulo($texto1);
+    }
+    p{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin: 15px;
+        padding: 5px;
+        color: $l;
+        text-align: justify;
+    }
+    h3{
+        @include estiloTitulo($texto2);
+    }
+    
+    /* Pagina Index */
+    
+    .subtituloIndex{
+        text-align: center;
+        background-color: $bgcolor3;
+        color: $xl;
+        .parrafoIndex{
+            text-align: center;
+            color: $l;
+            font-size: 1.1rem;
+        }
+    }
+    
+    .titulosImgIndex{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        h2{
+            background-color: $bgcolor3;
+        }
+    }
+    
+    .container-img{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        .imgIndex{
+            width: 130px;
+        }
+    }
+    
+    /*Pagina "Cursos" */
+    
+    .lista{
+        list-style-type: none;
+        padding: 5px;
+        .listaItem{
+            margin: 20px;
+            color: $l;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 1rem;
+        }
+    }
+    
+    .tabla{
+        margin: 50px 150px 150px 180px;
+        background-color: $bgcolor4;
+        text-align: justify;
+        width: 70%;
+        th{
+            color:$s;
+            padding: 8px;
+            font-family: 'PT Sans', sans-serif;
+        }
+        td{
+            @extend th ;
+        }
+    }
+    
+    
+    /* Pagina "Recetas"*/
+    
+    .container-recetas{
+        text-align: center;
+        padding: 10px;
+        .recetasLink{
+            text-decoration: none;
+            list-style-type: none;
+            color: $texto2;
+            font-size: 1.7rem;
+            &:hover{
+                color: $s;
+            }
+        }
+        .imgRecetas{
+            width: 400px;
+            border: $bgcolor5 solid 3px;
+        }
+    }
+    
+    /*Pagina "Nosotros"*/
+    
+    .container-seccion{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "descripcionNosotros descripcionNosotros imgNosotros imgNosotros "
+        "descripcionNosotros descripcionNosotros imgNosotros imgNosotros "
+        ;
+        .descripcionNosotros{
+            grid-template-areas: descripcionNosotros;
+        }
+        .imgNosotros{
+            grid-template-areas: imgNosotros;
+            width: 400px;
+            border: $bgcolor5 solid 3px;
+            margin-right: 10px;
+        }
+    
+    }
+    
+    
+    

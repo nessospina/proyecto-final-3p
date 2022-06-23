@@ -1,0 +1,24 @@
+.navbar{
+    background-color: $bgcolor1;
+    width: 100%;
+    margin: 10px auto;
+    padding: 5px;
+    .navbar-nav{
+        list-style-type: none;
+        padding: none;
+        display: flex;
+        justify-content: space-between;
+        .nav-item{
+            padding: 5px;
+            margin: 10px;
+            .nav-link{
+                text-decoration: none;
+                color: $l;
+                font-size: 1.3rem;
+                &:hover{
+                    color: $s;
+                }
+            }
+        }
+    }
+}

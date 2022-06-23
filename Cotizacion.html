@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos de pasteleria profesional y tienda de tortas">
+    <meta name="keywords" content="CURSO, PASTELERIA, RECETAS, DULCES, TORTAS, POSTRES,">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Inicia lineas de estilo -->
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <title>Sugar box | Personaliza tu pedido</title>
+</head>
+
+<body>
+
+    <!-- Titulo -->
+    
+    <header class="container">
+        <div>
+            <h1> sugarbox </h1>
+        </div>
+    </header>
+    
+    <!-- Barra de navegacion -->
+    
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"> <a class="nav-link active text"  aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Recetas</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="./Cotizacion.html">Cotizacion</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Curso</a>
+                        </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                    </ul>
+                    <div class="logo">
+                        <img src="./img/logo.png" width="55" height="55" class="logo">
+                    </div>
+                </div>
+        </div>
+    </nav>
+
+<!-- Formulario -->
+
+<main>
+
+    <div>
+        <form action="formulario">
+            <h2>¡Gracias por contactarnos!</h2>
+                <p>Es un honor para nosotros ser elegidos para tu fecha especial. Estaremos encantados de atenderte en cada paso de tu pedido y de hacer que tu pastel sea único, inolvidable y como siempre lo habías soñado </p>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Nombre"> Nombre:</label>
+        <input class="ms-2 border border-danger" type="text" name="yftjfg" id="" required>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Apellido"> Apellido:</label>
+        <input class="ms-2 border border-danger" type="text" name="" id=""required>
+
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Email"> Email:</label>
+        <input class="ms-2 border border-danger" type="text" name="" id=""required>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Telefono"> Telefono:</label>
+        <input class="ms-2 border border-danger" type="text" name="" id=""required>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Numero"> Cantidad de personas:</label>
+        <input class="ms-2 border border-danger" type="number" name="" id=""required>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <label for="Alergias"> ¿Tienes alguna alergia?</label>
+        <select class="ms-2 border border-danger" name="Alergias" required>
+            <option value="Opcion1">Mani</option>
+            <option value="Opcion2">Nueces</option>
+            <option value="Opcion3">Huevo</option>
+            <option value="Opcion4">Chocolate</option>
+            <option value="Opcion5">Lactosa</option>
+            <option value="Opcion6">Almendras</option>
+            <option value="Opcion7">Canela</option>
+            <option value="Opcion8">Ninguna</option>
+        </select>
+    </div>
+
+    <div class="textoFormulario p-4" style="color: #f7a6c1;">
+        <h3>Horario de entrega:</h3>
+        <p>Selecciona un rango de hora para la entrega</p>
+            <label for="Horario">De 10:00am a 2:00pm</label>
+            <input type="radio" name="" id="">
+            <label for="Horario">De 2:00pm a 10:00pm</label>
+            <input type="radio" name="" id="">
+    </div>
+
+    <div class= "p-4" style="color: #f7a6c1;">
+        <label for="start">Seleccione la fecha en la cual desea recibir su pastel</label>
+        <input class="ms-2 border border-danger" type="date" id="start" name="trip-start"
+            value="2018-07-22"
+            min="2018-01-01" max="2022-12-05">
+    </div>
+
+<!-- Caja de comentarios -->
+
+    <div class="textoFormulario p-3">
+        <h3>Detalles del pastel</h3>
+        <p>En la siguiente casilla, indícanos todos los detalles como colores, número de figuras o cualquier detalle que pueda ayudarnos a imaginar y diseñar tu pastel soñado.</p>
+
+        <textarea name="texto" class="boxComentario border border-danger" cols="40" rows="10"></textarea>
+        <button class="ms-2 border border-danger" type="submit">Enviar</button>
+    </div>
+    </form>
+
+</main>
+
+    <!-- Pie de pagina -->
+
+    <footer>
+        <nav class="footer">
+            <ul class="redes">
+                <li class="listaRedes"> <a class="redesLink" href="http://facebook.com">Facebook</a> </li>
+                <li class="listaRedes"> <a class="redesLink" href="http://Twitter.com">Twitter</a></li>
+                <li class="listaRedes"> <a class="redesLink" href="http://instagram.com">Instagram</a> </li>
+                <li class="listaRedes"> <a class="redesLink" href="https://policies.google.com/terms?hl=es">Terminos y condiciones &#169</a></li>
+            </ul>
+        </nav>
+</footer>
+
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>
