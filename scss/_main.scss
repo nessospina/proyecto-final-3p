@@ -1,121 +1,132 @@
 h2{
     @include estiloTitulo($texto1);
-    }
-    p{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 1.1rem;
-        line-height: 1.5;
-        margin: 15px;
-        padding: 5px;
-        color: $l;
-        text-align: justify;
-    }
-    h3{
-        @include estiloTitulo($texto2);
-    }
-    
+}
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 15px;
+    padding: 5px;
+    color: $l;
+    text-align: justify;
+}
+h3{
+    @include estiloTitulo($texto2);
+}
+
     /* Pagina Index */
     
-    .subtituloIndex{
-        text-align: center;
-        background-color: $bgcolor3;
-        color: $xl;
-    }
+.subtituloIndex{
+    text-align: center;
+    background-color: $bgcolor3;
+    color: $xl;
+}
 
-    .parrafoIndex{
-        text-align: center;
+.parrafoIndex{
+    text-align: center;
+    color: $l;
+    font-size: 1.1rem;
+}
+
+.titulosImgIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    h2{
+        background-color: $bgcolor3;
+    }
+}
+
+.container-img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .imgIndex{
+        width: 130px;
+    }
+}
+
+/*Pagina "Cursos" */
+
+.lista{
+    list-style-type: none;
+    padding: 5px;
+    .listaItem{
+        margin: 20px;
         color: $l;
-        font-size: 1.1rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 1rem;
     }
-    
-    .titulosImgIndex{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        h2{
-            background-color: $bgcolor3;
-        }
+}
+
+.tabla{
+    margin: 50px 150px 150px 180px;
+    background-color: $bgcolor4;
+    text-align: justify;
+    width: 70%;
+    th{
+        color:$s;
+        padding: 8px;
+        font-family: 'PT Sans', sans-serif;
     }
-    
-    .container-img{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        .imgIndex{
-            width: 130px;
-        }
+    td{
+        @extend th ;
     }
-    
-    /*Pagina "Cursos" */
-    
-    .lista{
+}
+
+
+/* Pagina "Recetas"*/
+
+.container-recetas{
+    text-align: center;
+    padding: 10px;
+    .recetasLink{
+        text-decoration: none;
         list-style-type: none;
-        padding: 5px;
-        .listaItem{
-            margin: 20px;
-            color: $l;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 1rem;
+        color: $texto2;
+        font-size: 1.7rem;
+        &:hover{
+            color: $s;
         }
     }
-    
-    .tabla{
-        margin: 50px 150px 150px 180px;
-        background-color: $bgcolor4;
-        text-align: justify;
-        width: 70%;
-        th{
-            color:$s;
-            padding: 8px;
-            font-family: 'PT Sans', sans-serif;
-        }
-        td{
-            @extend th ;
+    .imgRecetas{
+        width: 400px;
+        border: $bgcolor5 solid 3px;
+    }
+}
+
+
+/*Pagina "Nosotros"*/
+
+.container-seccion{
+    display: grid;
+    grid-template-columns: repeat(4, );
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "seccion2 seccion2 seccion2 imgNosotros"
+    "seccion2 seccion2  seccion2 imgNosotros"
+    ;
+    .seccion2{
+        grid-area: seccion2;
+        font-family: 'Didact Gothic', sans-serif;
+        color: $texto1;
+        font-size: 23px;
+    }
+    .imagenNosotros{
+        grid-area: imgNosotros;
+        padding: 10px 10px; 
+        margin: 0px 40px 20px 20px;
+    }
+    .imgNosotros{
+        border: $bgcolor1 solid;
+        width:500px;
+        height: 370px;
+        transition: linear 0.5s;
+        &:hover{
+            width:550px;
+            height: 420px;
+            border-color: $bgcolor5;
         }
     }
-    
-    
-    /* Pagina "Recetas"*/
-    
-    .container-recetas{
-        text-align: center;
-        padding: 10px;
-        .recetasLink{
-            text-decoration: none;
-            list-style-type: none;
-            color: $texto2;
-            font-size: 1.7rem;
-            &:hover{
-                color: $s;
-            }
-        }
-        .imgRecetas{
-            width: 400px;
-            border: $bgcolor5 solid 3px;
-        }
-    }
-    
-    /*Pagina "Nosotros"*/
-    
-    .container-seccion{
-        display: grid;
-        grid-template-columns: repeat(4, auto);
-        grid-template-rows: repeat(4, auto);
-        grid-template-areas: 
-        "descripcionNosotros descripcionNosotros imgNosotros imgNosotros "
-        "descripcionNosotros descripcionNosotros imgNosotros imgNosotros "
-        ;
-        .descripcionNosotros{
-            grid-template-areas: descripcionNosotros;
-        }
-        .imgNosotros{
-            grid-template-areas: imgNosotros;
-            width: 400px;
-            border: $bgcolor5 solid 3px;
-            margin-right: 10px;
-        }
-    
-    }
-    
-    
-    
+}
+

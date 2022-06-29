@@ -7,6 +7,7 @@ $bgcolor1:#e7fbbe;
 $bgcolor3: white;
 $bgcolor4: #aaebf7;
 $bgcolor5: #aca8f1;
+$bgcolor6: #93e6f5;
 
 /*mixin estilo*/
 
@@ -32,25 +33,90 @@ $l: map-get($letras, l);
 $m: map-get($letras, m);
 $s: map-get($letras, s);
 
+// Variables
+
 @import "main";
 @import "header";
 @import "nav";
 @import "body";
 @import "footer";
 
+// medias queries
 
+@media all and (max-width: 400px){
+    .navbar{
+        .logo{
+            display: none;
+        }
+    }
+    .titulosImgIndex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-img{
+        display: flex;
+        flex-direction: row;
+        .imgIndex{
+            width: 70px;
+        }
+    }
+    .container-seccion{
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "seccion2 seccion2 seccion2 seccion2 "
+        "imgNosotros imgNosotros imgNosotros imgNosotros"
+        ;
+        .seccion2{
+            text-align: justify;
+            font-size: medium;
+            margin: 20px 20px;
+            }
+            .imgNosotros{
+                display: grid;
+                justify-self: center;
+                border: $bgcolor5 solid 2px;
+                width:250px;
+                height: 190px;
+                padding: 0px;
+            }
+    }
 
+    .tabla{
+        margin-left : 20px;
+        text-align:left;
+        width: 200px;
+        th{
+            background-color: $bgcolor4;
+            color:$s;
+            padding: 5px;
+            font-family: 'PT Sans', sans-serif;
+        }
+        td{
+            background-color: $bgcolor6;
+            color:$s;
+            padding: 5px;
+            font-family: 'PT Sans', sans-serif;
+        }
+    }
+} 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.container-recetas{
+    text-align: center;
+    padding: 10px;
+    .recetasLink{
+        text-decoration: none;
+        list-style-type: none;
+        color: $texto2;
+        font-size: 1.7rem;
+        &:hover{
+            color: $s;
+        }
+    }
+    .imgRecetas{
+        width: 250px;
+        border: $bgcolor5 solid 3px;
+    }
+}
