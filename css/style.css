@@ -160,7 +160,7 @@ footer {
         footer .redes .listaRedes .redesLink:hover {
           color: #a29ee8; }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 415px) {
   .navbar .logo {
     display: none; }
   .titulosImgIndex {
